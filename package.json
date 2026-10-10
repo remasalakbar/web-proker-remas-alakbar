@@ -2,5 +2,17 @@
   "name": "remas-alakbar-proker",
   "private": true,
   "type": "module",
-  "dependencies": { "@vercel/blob": "^1.0.0" }
+  "scripts": {
+    "dev": "wrangler pages dev .",
+    "deploy": "wrangler pages deploy .",
+    "migrate:supabase": "node scripts/migrate-supabase.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.117.3",
+    "@vercel/blob": "^1.0.0",
+    "pg": "^8.23.1"
+  },
+  "devDependencies": {
+    "wrangler": "^4.149.0"
+  }
 }

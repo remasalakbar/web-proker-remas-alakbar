@@ -1,25 +1,42 @@
 <!DOCTYPE html>
-<html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex"><title>Admin Dokumentasi · Remas Al-Akbar</title>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Admin Program Kerja & Dokumentasi · Remas Al-Akbar</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#0d1b3a;--teal:#0e9aab;--mint:#dff4f6;--paper:#f6fafb;--line:#d8e4e8;--mut:#5b6b82;--red:#d9363e}
+:root{
+  --navy:#0d1b3a;--teal:#0e9aab;--teal-d:#0a7886;--mint:#dff4f6;--paper:#f6fafb;
+  --line:#d8e4e8;--mut:#5b6b82;--red:#d9363e;--green:#2e9e5b
+}
 *{box-sizing:border-box;margin:0}
 body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--paper);color:#14213d;min-height:100vh}
-h1,h2{font-family:'Bricolage Grotesque',sans-serif}
-.top{background:var(--navy);color:#fff;padding:16px 5vw;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:10}
-.top h1{font-size:20px}.top a,.top button{color:#9fe0e8;font:600 14px inherit;background:none;border:0;cursor:pointer;text-decoration:none;margin-left:14px}
-.box{max-width:960px;margin:26px auto;padding:0 5vw}
-.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px;margin-bottom:18px;animation:in .45s both}
-@keyframes in{from{opacity:0;transform:translateY(14px)}}
-#login{max-width:380px;margin:12vh auto;text-align:center}
-#login h2{font-size:28px;margin-bottom:6px}#login p{color:var(--mut);margin-bottom:16px}
-label{display:block;font-size:13px;font-weight:600;color:var(--mut);margin:12px 0 5px}
-input,select{width:100%;font:500 15px 'Plus Jakarta Sans';padding:12px 14px;border:1.5px solid var(--line);border-radius:12px;background:#fff;outline:0;transition:.2s}
-input:focus,select:focus{border-color:var(--teal);box-shadow:0 0 0 4px var(--mint)}
-.btn{background:var(--teal);color:#fff;border:0;border-radius:12px;padding:13px 20px;font:700 15px 'Plus Jakarta Sans';cursor:pointer;transition:transform .2s,opacity .2s}
+h1,h2,h3{font-family:'Bricolage Grotesque',sans-serif}
+.top{background:var(--navy);color:#fff;padding:16px 5vw;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:20}
+.top h1{font-size:20px;display:flex;align-items:center;gap:8px}
+.top a,.top button{color:#9fe0e8;font:600 14px inherit;background:none;border:0;cursor:pointer;text-decoration:none;margin-left:14px}
+.box{max-width:980px;margin:26px auto;padding:0 5vw}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;margin-bottom:20px;animation:in .4s both}
+@keyframes in{from{opacity:0;transform:translateY(12px)}}
+#login{max-width:400px;margin:12vh auto;text-align:center}
+#login h2{font-size:28px;margin-bottom:6px}#login p{color:var(--mut);margin-bottom:18px;font-size:14px}
+label{display:block;font-size:13px;font-weight:700;color:var(--mut);margin:14px 0 6px;text-transform:uppercase;letter-spacing:.03em}
+input,select,textarea{width:100%;font:500 15px 'Plus Jakarta Sans';padding:12px 14px;border:1.5px solid var(--line);border-radius:12px;background:#fff;outline:0;transition:.2s}
+textarea{resize:vertical;min-height:76px;line-height:1.5}
+input:focus,select:focus,textarea:focus{border-color:var(--teal);box-shadow:0 0 0 4px var(--mint)}
+.btn{background:var(--teal);color:#fff;border:0;border-radius:12px;padding:12px 20px;font:700 14px 'Plus Jakarta Sans';cursor:pointer;transition:transform .2s,opacity .2s;display:inline-flex;align-items:center;justify-content:center;gap:6px}
 .btn:hover{transform:translateY(-2px)}.btn:disabled{opacity:.5;transform:none}
-.btn.dk{background:var(--navy)}.btn.w{width:100%;margin-top:14px}
+.btn.dk{background:var(--navy)}
+.btn.w{width:100%;margin-top:14px}
+.btn.danger{background:#fff;color:var(--red);border:1.5px solid var(--red)}
+.btn.danger:hover{background:#fff3f3}
+.btn.subtle{background:var(--mint);color:var(--teal-d)}
+
+.proker-ctrl{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+.proker-actions{display:flex;gap:8px}
+
 .drop{border:2px dashed var(--teal);background:var(--mint);border-radius:16px;padding:26px;text-align:center;cursor:pointer;transition:.25s;font-weight:600;color:#0a7886}
 .drop:hover,.drop.on{transform:scale(1.01);background:#cdeef2}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px;margin-top:16px}
@@ -28,117 +45,570 @@ input:focus,select:focus{border-color:var(--teal);box-shadow:0 0 0 4px var(--min
 .th .f{padding:10px}.th input{padding:8px 10px;font-size:13.5px;margin-bottom:6px}
 .ac{display:flex;gap:6px}.ac button{flex:1;border:1px solid var(--line);background:#fff;border-radius:9px;padding:7px;cursor:pointer;font-size:14px}
 .ac .d{color:var(--red)}
-.up{opacity:.6;display:grid;place-items:center;aspect-ratio:4/3;font-weight:600;color:var(--mut)}
-.bar{position:sticky;bottom:0;background:#fff;border-top:1px solid var(--line);padding:12px 5vw;display:flex;gap:12px;align-items:center;justify-content:space-between}
-#st{font-size:14px;color:var(--mut)}#st.dirty{color:#c2570f;font-weight:600}
-#toast{position:fixed;left:50%;bottom:90px;transform:translate(-50%,30px);background:var(--navy);color:#fff;padding:12px 20px;border-radius:99px;opacity:0;transition:.35s;pointer-events:none;z-index:50;max-width:90vw;text-align:center}
+.up{opacity:.7;display:grid;place-items:center;aspect-ratio:4/3;font-weight:600;color:var(--teal-d);background:var(--mint);border-radius:14px}
+
+.bar{position:sticky;bottom:0;background:#fff;border-top:1px solid var(--line);padding:14px 5vw;display:flex;gap:12px;align-items:center;justify-content:space-between;z-index:20;box-shadow:0 -6px 20px rgba(0,0,0,.05)}
+#st{font-size:14px;color:var(--mut)}#st.dirty{color:#c2570f;font-weight:700}
+#toast{position:fixed;left:50%;bottom:90px;transform:translate(-50%,30px);background:var(--navy);color:#fff;padding:12px 24px;border-radius:99px;opacity:0;transition:.35s;pointer-events:none;z-index:60;max-width:90vw;text-align:center;box-shadow:0 10px 24px rgba(0,0,0,.2)}
 #toast.on{opacity:1;transform:translate(-50%,0)}#toast.err{background:var(--red)}
 .hide{display:none!important}
-</style></head><body>
+
+/* Modal dialog */
+dialog{border:0;border-radius:20px;padding:26px;width:min(520px,92vw);margin:auto;box-shadow:0 24px 60px rgba(13,27,58,.25)}
+dialog::backdrop{background:rgba(13,27,58,.6);backdrop-filter:blur(4px)}
+.modal-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.modal-head h3{font-size:22px}
+.modal-actions{display:flex;gap:10px;margin-top:20px;justify-content:flex-end}
+</style>
+</head>
+<body>
 
 <div id="login" class="card">
-  <h2>Admin Dokumentasi</h2><p>Masukkan password admin Remas Al-Akbar.</p>
-  <input id="pw" type="password" placeholder="Password" autocomplete="current-password">
-  <button class="btn w" id="go">Masuk</button>
+  <h2>Admin Panel Remas</h2>
+  <p>Masukkan password admin Remas Al-Akbar untuk mengelola data dan dokumentasi Supabase.</p>
+  <input id="pw" type="password" placeholder="Password Admin (default: remas2026)" autocomplete="current-password">
+  <button class="btn w" id="go">Masuk ke Panel</button>
 </div>
 
 <div id="app" class="hide">
-  <div class="top"><h1>📷 Admin Dokumentasi</h1><div><a href="/" target="_blank">Lihat situs</a><button id="out">Keluar</button></div></div>
-  <div class="box">
-    <div class="card">
-      <label>Pilih program kerja</label><select id="sel"></select>
-      <label>Link album lengkap (opsional)</label><input id="album" placeholder="https://drive.google.com/...">
-      <label>Link video (opsional)</label><input id="video" placeholder="https://youtube.com/...">
+  <div class="top">
+    <h1>⚙️ Panel Admin · Remas Al-Akbar</h1>
+    <div>
+      <a href="/" target="_blank">Lihat Website ↗</a>
+      <button id="out">Keluar</button>
     </div>
+  </div>
+
+  <div class="box">
+    <!-- Card 1: Pilihan & Pengaturan Program Kerja -->
     <div class="card">
-      <div class="drop" id="drop">＋ Ketuk untuk pilih foto (bisa banyak sekaligus)<br><small style="font-weight:500">Foto otomatis diperkecil sebelum diunggah</small></div>
+      <div class="proker-ctrl">
+        <h3>Program Kerja Terpilih</h3>
+        <div class="proker-actions">
+          <button class="btn subtle" id="btn-add-proker">＋ Buat Program Baru</button>
+          <button class="btn danger" id="btn-del-proker">🗑 Hapus Program</button>
+        </div>
+      </div>
+
+      <label for="sel">Pilih Program Kerja</label>
+      <select id="sel"></select>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin-top:14px">
+        <div>
+          <label>Nama Program</label>
+          <input id="p-nama" placeholder="Contoh: Majelis Subuh GenZI">
+        </div>
+        <div>
+          <label>Divisi</label>
+          <select id="p-divisi"></select>
+        </div>
+      </div>
+
+      <label>Deskripsi Singkat</label>
+      <textarea id="p-desk" placeholder="Penjelasan singkat kegiatan..."></textarea>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px">
+        <div>
+          <label>Tujuan Program</label>
+          <textarea id="p-tujuan" placeholder="Tujuan yang ingin dicapai..."></textarea>
+        </div>
+        <div>
+          <label>Sasaran Peserta</label>
+          <textarea id="p-sasaran" placeholder="Contoh: Generasi muda / Gen Z..."></textarea>
+        </div>
+      </div>
+
+      <label>Waktu / Jadwal Pelaksanaan</label>
+      <input id="p-waktu" placeholder="Contoh: 1 bulan sekali / Setiap Selasa malam">
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px">
+        <div>
+          <label>Link Album Lengkap (Google Drive dll)</label>
+          <input id="album" placeholder="https://drive.google.com/...">
+        </div>
+        <div>
+          <label>Link Video Dokumentasi (YouTube / Reels dll)</label>
+          <input id="video" placeholder="https://youtube.com/...">
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2: Dokumentasi Foto (Cloudflare R2 Storage) -->
+    <div class="card">
+      <h3 style="margin-bottom:6px">Foto Dokumentasi</h3>
+      <p style="color:var(--mut);font-size:13.5px;margin-bottom:14px">
+        Foto disimpan di <b>Cloudflare R2 (Bucket: remas-alakbar-dokumentasi)</b>, cepat, tanpa biaya egress bandwidth, dan otomatis teroptimasi.
+      </p>
+
+      <div class="drop" id="drop">
+        ＋ Ketuk atau Tarik Foto ke Sini (Bisa banyak sekaligus)<br>
+        <small style="font-weight:500;color:var(--teal-d)">Otomatis dioptimalkan sebelum diunggah</small>
+      </div>
       <input id="file" type="file" accept="image/*" multiple class="hide">
+      
       <div class="grid" id="grid"></div>
     </div>
   </div>
-  <div class="bar"><span id="st">Tidak ada perubahan</span><button class="btn dk" id="save" disabled>Simpan perubahan</button></div>
+
+  <div class="bar">
+    <span id="st">Tidak ada perubahan</span>
+    <button class="btn dk" id="save" disabled>Simpan Perubahan ke Supabase</button>
+  </div>
 </div>
+
+<!-- Modal Tambah Program Baru -->
+<dialog id="dlg-new">
+  <div class="modal-head">
+    <h3>Tambah Program Kerja Baru</h3>
+    <button class="btn subtle" id="dlg-close" style="padding:4px 10px">✕</button>
+  </div>
+  <label>Nama Program</label>
+  <input id="new-nama" placeholder="Contoh: Pelatihan Desain Grafis">
+  <label>Divisi</label>
+  <select id="new-divisi"></select>
+  <label>Deskripsi Singkat</label>
+  <textarea id="new-desk" placeholder="Uraian singkat program..."></textarea>
+  <div class="modal-actions">
+    <button class="btn subtle" id="new-cancel">Batal</button>
+    <button class="btn" id="new-save">Tambahkan</button>
+  </div>
+</dialog>
+
 <div id="toast"></div>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="data.js"></script>
+<script src="supabase.js"></script>
 <script>
-const $=s=>document.querySelector(s);
-const slug=t=>t.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
-const esc=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-let PW=sessionStorage.getItem('pw')||'',dok={},cur=null,removed=[],dirty=false,busy=0;
+const $ = s => document.querySelector(s);
+const slugify = t => String(t).toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+const esc = t => String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 
-function toast(m,err){const t=$('#toast');t.textContent=m;t.className='on'+(err?' err':'');clearTimeout(t._);t._=setTimeout(()=>t.className='',2800)}
-function setDirty(v){dirty=v;$('#st').textContent=v?'Ada perubahan yang belum disimpan':'Tidak ada perubahan';$('#st').className=v?'dirty':'';$('#save').disabled=!v||busy>0}
-async function api(url,opt={}){
-  opt.headers=Object.assign({'x-admin-password':PW},opt.headers||{});
-  const r=await fetch(url,opt);const j=await r.json().catch(()=>({}));
-  if(r.status===401){logout(true);throw new Error('Password salah')}
-  if(!r.ok)throw new Error(j.error||('Error '+r.status));return j}
-function logout(silent){sessionStorage.removeItem('pw');PW='';$('#app').classList.add('hide');$('#login').classList.remove('hide');if(!silent)toast('Anda sudah keluar')}
+let PW = sessionStorage.getItem('pw') || '';
+let curProg = null, removedPhotos = [], dirty = false, busy = 0;
 
+function toast(m, err){
+  const t = $('#toast');
+  t.textContent = m;
+  t.className = 'on' + (err ? ' err' : '');
+  clearTimeout(t._);
+  t._ = setTimeout(() => t.className = '', 3000);
+}
+
+function setDirty(v){
+  dirty = v;
+  $('#st.dirty, #st').textContent = v ? 'Ada perubahan yang belum disimpan' : 'Semua perubahan tersimpan di Supabase';
+  $('#st').className = v ? 'dirty' : '';
+  $('#save').disabled = !v || busy > 0;
+}
+
+// Autentikasi Admin via Supabase RPC verify_admin_password
 async function login(){
-  PW=$('#pw').value||PW;$('#go').disabled=true;
-  try{
-    await api('/api/docs',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({check:true})});
-    sessionStorage.setItem('pw',PW);
-    dok=await (await fetch('/api/docs?t='+Date.now())).json();
-    $('#login').classList.add('hide');$('#app').classList.remove('hide');buildSelect();pick();
-  }catch(e){toast(e.message,true)}
-  $('#go').disabled=false}
-$('#go').onclick=login;$('#pw').onkeydown=e=>{if(e.key==='Enter')login()};$('#out').onclick=()=>logout();
+  PW = $('#pw').value.trim() || PW;
+  $('#go').disabled = true;
+  $('#go').textContent = 'Memverifikasi…';
 
-function buildSelect(){
-  $('#sel').innerHTML=DATA.divisi.map(d=>'<optgroup label="'+esc(d.nama)+'">'+DATA.program.filter(p=>p.d===d.id).map(p=>{
-    const n=((dok[slug(p.n)]||{}).foto||[]).length;return '<option value="'+slug(p.n)+'">'+esc(p.n)+(n?'  ('+n+' foto)':'')+'</option>'}).join('')+'</optgroup>').join('');
-  if(cur)$('#sel').value=cur}
-function entry(){return dok[cur]||(dok[cur]={foto:[]})}
-function pick(){cur=$('#sel').value;const e=entry();$('#album').value=e.album||'';$('#video').value=e.video||'';draw()}
-$('#sel').onchange=pick;
-$('#album').oninput=e=>{entry().album=e.target.value.trim();setDirty(true)};
-$('#video').oninput=e=>{entry().video=e.target.value.trim();setDirty(true)};
+  try {
+    const sb = getSupabase();
+    if(!sb) throw new Error('Supabase client tidak dapat dimuat');
 
-function draw(){
-  const f=entry().foto||(entry().foto=[]);
-  $('#grid').innerHTML=f.map((x,i)=>'<div class="th" style="animation-delay:'+i*40+'ms"><img src="'+esc(x.src)+'" loading="lazy" alt="">'
-   +'<div class="f"><input data-k="cap" data-i="'+i+'" value="'+esc(x.cap||'')+'" placeholder="Keterangan foto">'
-   +'<input data-k="tgl" data-i="'+i+'" value="'+esc(x.tgl||'')+'" placeholder="Tanggal, mis. 4 Okt 2026">'
-   +'<div class="ac"><button data-m="-1" data-i="'+i+'" aria-label="Geser kiri">◀</button><button data-m="1" data-i="'+i+'" aria-label="Geser kanan">▶</button><button class="d" data-del="'+i+'" aria-label="Hapus">🗑</button></div></div></div>').join('')
-   +'<div class="up hide" id="upl"></div>'}
-$('#grid').addEventListener('input',e=>{const k=e.target.dataset.k;if(!k)return;entry().foto[+e.target.dataset.i][k]=e.target.value;setDirty(true)});
-$('#grid').addEventListener('click',e=>{
-  const b=e.target.closest('button');if(!b)return;const f=entry().foto;
-  if(b.dataset.del!==undefined){if(!confirm('Hapus foto ini?'))return;const [x]=f.splice(+b.dataset.del,1);removed.push(x.src)}
-  else{const i=+b.dataset.i,j=i+ +b.dataset.m;if(j<0||j>=f.length)return;[f[i],f[j]]=[f[j],f[i]]}
-  setDirty(true);draw()});
+    const { data: isValid, error } = await sb.rpc('verify_admin_password', { pass: PW });
+    if(error) throw new Error(error.message);
+    if(!isValid) throw new Error('Password admin salah');
 
-async function shrink(file){
-  const bm=await createImageBitmap(file,{imageOrientation:'from-image'});
-  const k=Math.min(1,1600/Math.max(bm.width,bm.height));
-  const c=document.createElement('canvas');c.width=Math.round(bm.width*k);c.height=Math.round(bm.height*k);
-  c.getContext('2d').drawImage(bm,0,0,c.width,c.height);
-  return new Promise(r=>c.toBlob(r,'image/jpeg',.82))}
-async function addFiles(files){
-  const s=cur;
-  for(const file of files){
-    busy++;setDirty(dirty);const u=$('#upl');if(u){u.classList.remove('hide');u.textContent='Mengunggah… ('+busy+')'}
-    try{
-      const blob=await shrink(file);
-      const r=await api('/api/upload?slug='+s,{method:'POST',headers:{'content-type':'image/jpeg'},body:blob});
-      (dok[s]||(dok[s]={foto:[]})).foto.push({src:r.url,cap:'',tgl:''});setDirty(true);
-    }catch(e){toast(file.name+': '+e.message,true)}
-    busy--;if(cur===s)draw();setDirty(dirty)}
+    sessionStorage.setItem('pw', PW);
+    $('#login').classList.add('hide');
+    $('#app').classList.remove('hide');
+
+    // Muat data dari Supabase
+    await syncFromSupabase();
+    buildDivisiSelect();
+    buildProgramSelect();
+    pickProgram();
+    toast('Berhasil masuk ke panel admin');
+  } catch(e) {
+    toast(e.message, true);
+    logout(true);
+  } finally {
+    $('#go').disabled = false;
+    $('#go').textContent = 'Masuk ke Panel';
   }
-$('#drop').onclick=()=>$('#file').click();
-$('#file').onchange=e=>{addFiles([...e.target.files]);e.target.value=''};
-['dragover','dragleave','drop'].forEach(n=>$('#drop').addEventListener(n,e=>{e.preventDefault();$('#drop').classList.toggle('on',n==='dragover');if(n==='drop')addFiles([...e.dataTransfer.files].filter(f=>f.type.startsWith('image/')))}));
+}
 
-$('#save').onclick=async()=>{
-  $('#save').disabled=true;$('#save').textContent='Menyimpan…';
-  const out={};Object.entries(dok).forEach(([k,v])=>{const foto=(v.foto||[]).filter(x=>x.src);if(foto.length||v.album||v.video)out[k]={foto,album:v.album||'',video:v.video||''}});
-  try{await api('/api/docs',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({dok:out,remove:removed})});
-    removed=[];dok=out;setDirty(false);buildSelect();toast('Tersimpan. Situs akan diperbarui dalam ±1 menit.')}
-  catch(e){toast(e.message,true);setDirty(true)}
-  $('#save').textContent='Simpan perubahan'};
-addEventListener('beforeunload',e=>{if(dirty){e.preventDefault();e.returnValue=''}});
-if(PW)login();
-</script></body></html>
+function logout(silent){
+  sessionStorage.removeItem('pw');
+  PW = '';
+  $('#app').classList.add('hide');
+  $('#login').classList.remove('hide');
+  if(!silent) toast('Anda telah keluar');
+}
+
+$('#go').onclick = login;
+$('#pw').onkeydown = e => { if(e.key === 'Enter') login(); };
+$('#out').onclick = () => logout();
+
+function buildDivisiSelect(){
+  const opts = DATA.divisi.map(d => `<option value="${esc(d.id)}">${esc(d.nama)}</option>`).join('');
+  $('#p-divisi').innerHTML = opts;
+  $('#new-divisi').innerHTML = opts;
+}
+
+function buildProgramSelect(){
+  const sel = $('#sel');
+  sel.innerHTML = DATA.divisi.map(d => {
+    const progs = DATA.program.filter(p => p.d === d.id);
+    return `<optgroup label="${esc(d.nama)}">${progs.map(p => {
+      const n = (p.dok && p.dok.foto ? p.dok.foto.length : 0);
+      return `<option value="${p.id || slugify(p.n)}">${esc(p.n)}${n ? ` (${n} foto)` : ''}</option>`;
+    }).join('')}</optgroup>`;
+  }).join('');
+
+  if(curProg){
+    sel.value = curProg.id || slugify(curProg.n);
+  }
+}
+
+function pickProgram(){
+  const val = $('#sel').value;
+  curProg = DATA.program.find(p => String(p.id) === String(val) || slugify(p.n) === String(val)) || DATA.program[0];
+  if(!curProg) return;
+
+  $('#p-nama').value = curProg.n || '';
+  $('#p-divisi').value = curProg.d || 'bph';
+  $('#p-desk').value = curProg.desk || '';
+  $('#p-tujuan').value = curProg.tujuan || '';
+  $('#p-sasaran').value = curProg.sasaran || '';
+  $('#p-waktu').value = curProg.waktu || '';
+  $('#album').value = (curProg.dok && curProg.dok.album) || '';
+  $('#video').value = (curProg.dok && curProg.dok.video) || '';
+
+  renderPhotos();
+}
+
+$('#sel').onchange = () => {
+  if(dirty && !confirm('Ada perubahan yang belum disimpan. Yakin ingin berganti program?')){
+    $('#sel').value = curProg.id || slugify(curProg.n);
+    return;
+  }
+  setDirty(false);
+  pickProgram();
+};
+
+// Form event listeners
+['p-nama', 'p-divisi', 'p-desk', 'p-tujuan', 'p-sasaran', 'p-waktu', 'album', 'video'].forEach(id => {
+  $('#' + id).addEventListener('input', () => {
+    if(!curProg) return;
+    curProg.n = $('#p-nama').value;
+    curProg.d = $('#p-divisi').value;
+    curProg.desk = $('#p-desk').value;
+    curProg.tujuan = $('#p-tujuan').value;
+    curProg.sasaran = $('#p-sasaran').value;
+    curProg.waktu = $('#p-waktu').value;
+    if(!curProg.dok) curProg.dok = { foto: [] };
+    curProg.dok.album = $('#album').value.trim();
+    curProg.dok.video = $('#video').value.trim();
+    setDirty(true);
+  });
+});
+
+// Render thumbnail foto dokumentasi
+function renderPhotos(){
+  const fotos = (curProg && curProg.dok && curProg.dok.foto) || [];
+  $('#grid').innerHTML = fotos.map((x, i) => `
+    <div class="th" style="animation-delay:${i*30}ms">
+      <img src="${esc(x.src)}" loading="lazy" alt="">
+      <div class="f">
+        <input data-k="cap" data-i="${i}" value="${esc(x.cap||'')}" placeholder="Keterangan foto">
+        <input data-k="tgl" data-i="${i}" value="${esc(x.tgl||'')}" placeholder="Tanggal foto, mis. 4 Okt 2026">
+        <div class="ac">
+          <button data-m="-1" data-i="${i}" aria-label="Geser kiri">◀</button>
+          <button data-m="1" data-i="${i}" aria-label="Geser kanan">▶</button>
+          <button class="d" data-del="${i}" aria-label="Hapus">🗑</button>
+        </div>
+      </div>
+    </div>
+  `).join('') + '<div class="up hide" id="upl"></div>';
+}
+
+$('#grid').addEventListener('input', e => {
+  const k = e.target.dataset.k;
+  if(!k || !curProg) return;
+  curProg.dok.foto[+e.target.dataset.i][k] = e.target.value;
+  setDirty(true);
+});
+
+$('#grid').addEventListener('click', e => {
+  const b = e.target.closest('button');
+  if(!b || !curProg) return;
+  const f = curProg.dok.foto;
+
+  if(b.dataset.del !== undefined){
+    if(!confirm('Hapus foto ini dari program?')) return;
+    const [x] = f.splice(+b.dataset.del, 1);
+    removedPhotos.push(x);
+    setDirty(true);
+    renderPhotos();
+  } else if(b.dataset.m !== undefined){
+    const i = +b.dataset.i, j = i + +b.dataset.m;
+    if(j < 0 || j >= f.length) return;
+    [f[i], f[j]] = [f[j], f[i]];
+    setDirty(true);
+    renderPhotos();
+  }
+});
+
+// Kompresi foto sebelum upload
+async function shrink(file){
+  const bm = await createImageBitmap(file, { imageOrientation: 'from-image' });
+  const k = Math.min(1, 1600 / Math.max(bm.width, bm.height));
+  const c = document.createElement('canvas');
+  c.width = Math.round(bm.width * k);
+  c.height = Math.round(bm.height * k);
+  c.getContext('2d').drawImage(bm, 0, 0, c.width, c.height);
+  return new Promise(r => c.toBlob(r, 'image/jpeg', 0.82));
+}
+
+// Upload foto ke Cloudflare R2 (dengan fallback otomatis ke Supabase Storage)
+async function addFiles(files){
+  if(!curProg) return;
+  const slug = slugify(curProg.n);
+
+  for(const file of files){
+    busy++;
+    setDirty(dirty);
+    const u = $('#upl');
+    if(u){ u.classList.remove('hide'); u.textContent = `Mengunggah… (${busy})`; }
+
+    try {
+      const blob = await shrink(file);
+      let photoUrl = '';
+
+      // 1. Coba upload langsung ke Cloudflare R2 via Pages Function /api/upload
+      try {
+        const resp = await fetch(`/api/upload?slug=${slug}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'image/jpeg' },
+          body: blob
+        });
+        if(resp.ok){
+          const res = await resp.json();
+          if(res.url) photoUrl = res.url;
+        }
+      } catch(err){
+        // Cloudflare Pages Function mungkin belum aktif di pengetesan lokal
+      }
+
+      // 2. Fallback ke Supabase Storage jika R2 binding belum aktif
+      if(!photoUrl){
+        const sb = getSupabase();
+        if(sb){
+          const filePath = `proker/${slug}/${Date.now()}-${Math.random().toString(36).slice(2,7)}.jpg`;
+          const { error } = await sb.storage.from('dokumentasi').upload(filePath, blob, {
+            contentType: 'image/jpeg',
+            upsert: true
+          });
+          if(!error){
+            const { data: pubUrl } = sb.storage.from('dokumentasi').getPublicUrl(filePath);
+            photoUrl = pubUrl.publicUrl;
+          }
+        }
+      }
+
+      if(!photoUrl){
+        throw new Error('Gagal mengunggah foto ke Cloudflare R2 / Supabase Storage');
+      }
+
+      if(!curProg.dok) curProg.dok = { foto: [] };
+      if(!curProg.dok.foto) curProg.dok.foto = [];
+
+      curProg.dok.foto.push({
+        src: photoUrl,
+        cap: '',
+        tgl: ''
+      });
+      setDirty(true);
+    } catch(err){
+      toast(file.name + ': ' + err.message, true);
+    }
+    busy--;
+    renderPhotos();
+    setDirty(dirty);
+  }
+}
+
+$('#drop').onclick = () => $('#file').click();
+$('#file').onchange = e => { addFiles([...e.target.files]); e.target.value = ''; };
+['dragover','dragleave','drop'].forEach(n => $('#drop').addEventListener(n, e => {
+  e.preventDefault();
+  $('#drop').classList.toggle('on', n === 'dragover');
+  if(n === 'drop') addFiles([...e.dataTransfer.files].filter(f => f.type.startsWith('image/')));
+}));
+
+// Tambah Program Baru
+const dlg = $('#dlg-new');
+$('#btn-add-proker').onclick = () => { dlg.showModal(); };
+$('#dlg-close').onclick = () => dlg.close();
+$('#new-cancel').onclick = () => dlg.close();
+$('#new-save').onclick = async () => {
+  const nama = $('#new-nama').value.trim();
+  const divisi = $('#new-divisi').value;
+  const desk = $('#new-desk').value.trim();
+  if(!nama){ toast('Nama program harus diisi', true); return; }
+
+  const newProg = {
+    n: nama,
+    d: divisi,
+    desk: desk,
+    tujuan: '',
+    sasaran: '',
+    waktu: 'Belum ditentukan',
+    dok: { album: '', video: '', foto: [] }
+  };
+
+  DATA.program.push(newProg);
+  curProg = newProg;
+  buildProgramSelect();
+  pickProgram();
+  setDirty(true);
+  dlg.close();
+  $('#new-nama').value = '';
+  $('#new-desk').value = '';
+  toast('Program baru ditambahkan ke draf. Jangan lupa simpan perubahan!');
+};
+
+// Hapus Program Terpilih
+$('#btn-del-proker').onclick = async () => {
+  if(!curProg) return;
+  if(!confirm(`Hapus program "${curProg.n}" secara permanen?`)) return;
+
+  const sb = getSupabase();
+  if(curProg.id && sb){
+    const { error } = await sb.from('program_kerja').delete().eq('id', curProg.id);
+    if(error){ toast(error.message, true); return; }
+  }
+
+  DATA.program = DATA.program.filter(p => p !== curProg);
+  curProg = DATA.program[0] || null;
+  buildProgramSelect();
+  pickProgram();
+  setDirty(false);
+  toast('Program kerja berhasil dihapus');
+};
+
+// Simpan Semua Perubahan Program & Dokumentasi ke Supabase Database
+$('#save').onclick = async () => {
+  if(!curProg) return;
+  $('#save').disabled = true;
+  $('#save').textContent = 'Menyimpan ke Supabase…';
+
+  try {
+    const sb = getSupabase();
+    if(!sb) throw new Error('Supabase tidak terhubung');
+
+    const slug = slugify(curProg.n);
+    let progId = curProg.id;
+
+    // 1. Simpan / Perbarui Program Kerja
+    if(!progId){
+      const { data, error } = await sb.from('program_kerja').insert({
+        slug: slug,
+        divisi_id: curProg.d,
+        nama: curProg.n,
+        deskripsi: curProg.desk,
+        tujuan: curProg.tujuan,
+        sasaran: curProg.sasaran,
+        waktu: curProg.waktu,
+        album_url: (curProg.dok && curProg.dok.album) || '',
+        video_url: (curProg.dok && curProg.dok.video) || ''
+      }).select().single();
+      if(error) throw error;
+      progId = data.id;
+      curProg.id = progId;
+    } else {
+      const { error } = await sb.from('program_kerja').update({
+        slug: slug,
+        divisi_id: curProg.d,
+        nama: curProg.n,
+        deskripsi: curProg.desk,
+        tujuan: curProg.tujuan,
+        sasaran: curProg.sasaran,
+        waktu: curProg.waktu,
+        album_url: (curProg.dok && curProg.dok.album) || '',
+        video_url: (curProg.dok && curProg.dok.video) || '',
+        updated_at: new Date().toISOString()
+      }).eq('id', progId);
+      if(error) throw error;
+    }
+
+    // 2. Hapus foto yang dihapus dari Supabase dan Cloudflare R2
+    if(removedPhotos.length > 0){
+      const idsToDelete = removedPhotos.filter(p => p.id).map(p => p.id);
+      if(idsToDelete.length > 0){
+        await sb.from('dokumentasi_foto').delete().in('id', idsToDelete);
+      }
+
+      // Hapus file dari Cloudflare R2 jika file ada di R2
+      const r2Paths = removedPhotos
+        .map(p => p.src || '')
+        .filter(s => s.includes('proker/'))
+        .map(s => {
+          const match = s.match(/(proker\/[^?#]+)/);
+          return match ? match[1] : null;
+        })
+        .filter(Boolean);
+
+      if(r2Paths.length > 0){
+        fetch('/api/delete', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ paths: r2Paths })
+        }).catch(() => {});
+      }
+
+      removedPhotos = [];
+    }
+
+    // 3. Simpan foto-foto dokumentasi
+    const fotos = (curProg.dok && curProg.dok.foto) || [];
+    for(let i = 0; i < fotos.length; i++){
+      const f = fotos[i];
+      if(f.id){
+        await sb.from('dokumentasi_foto').update({
+          caption: f.cap || '',
+          tanggal: f.tgl || '',
+          urutan: i + 1
+        }).eq('id', f.id);
+      } else {
+        const { data: insFoto, error: errIns } = await sb.from('dokumentasi_foto').insert({
+          program_id: progId,
+          src: f.src,
+          caption: f.cap || '',
+          tanggal: f.tgl || '',
+          urutan: i + 1
+        }).select().single();
+        if(!errIns && insFoto){
+          f.id = insFoto.id;
+        }
+      }
+    }
+
+    setDirty(false);
+    buildProgramSelect();
+    toast('Perubahan berhasil disimpan dan tersinkronisasi secara real-time!');
+  } catch(err){
+    toast('Gagal menyimpan: ' + err.message, true);
+    setDirty(true);
+  } finally {
+    $('#save').textContent = 'Simpan Perubahan ke Supabase';
+    $('#save').disabled = !dirty;
+  }
+};
+
+addEventListener('beforeunload', e => {
+  if(dirty){ e.preventDefault(); e.returnValue = ''; }
+});
+
+if(PW) login();
+</script>
+</body>
+</html>

@@ -150,5 +150,132 @@ const DATA = {
    "sasaran": "Masyarakat sekitar yang biasa berolahraga di lingkungan Al-Akbar",
    "waktu": "Setiap 2 bulan sekali"
   }
- ]
+ ],
+ "profil": {
+  "nama": "Remaja Masjid Al-Akbar Surabaya",
+  "singkatan": "REMAS Al-Akbar",
+  "periode": "2026/2027",
+  "semboyan": "Mosque Youth Movement",
+  "sk": "SK Direktur Utama Masjid Al Akbar Surabaya No. 43/I/01-451/SK/VIII/2017",
+  "visi": "Menjadikan REMAS sebagai kebanggaan dan trend pemuda masa kini.",
+  "misi": [
+   "Menciptakan ruang yang nyaman bagi pemuda untuk berkumpul, belajar, dan berkarya.",
+   "Menghadirkan program yang relevan dengan kebutuhan dan perkembangan generasi muda.",
+   "Memunculkan budaya organisasi REMAS yang solid, inklusif, kolaboratif, dan menyenangkan.",
+   "Mencetak pemimpin muda yang visioner, berintegritas, mandiri, dan bertanggung jawab.",
+   "Membangun jejaring dan kolaborasi strategis dengan sekolah, kampus, komunitas pemuda, organisasi kepemudaan, pesantren, masjid."
+  ],
+  "sejarah": [
+   {
+    "periode": "2000 – 2016",
+    "judul": "Latar Belakang & Era Awal",
+    "uraian": "Masjid Nasional Al Akbar Surabaya diresmikan oleh Presiden KH. Abdurrahman Wahid (Gus Dur) pada 10 November 2000. Sejak awal berdirinya, pengelola masjid menyadari pentingnya peranan generasi muda dan anak-anak remaja dalam memakmurkan masjid melalui berbagai kegiatan keagamaan, sosial, dan budaya."
+   },
+   {
+    "periode": "Tahun 2017",
+    "judul": "Formalisasi Kepengurusan melalui SK",
+    "uraian": "Dalam rangka memperkuat peran generasi muda secara terstruktur dan formal, diterbitkan Surat Keputusan (SK) Direktur Utama Masjid Al Akbar Surabaya Nomor 43/I/01-451/SK/VIII/2017. SK ini menetapkan susunan kepengurusan resmi Remaja Masjid Al Akbar Surabaya sebagai tonggak penting legalitas keorganisasian dalam menjalankan aktivitas dakwah dan sosial secara masif."
+   },
+   {
+    "periode": "Era Modern",
+    "judul": "Transformasi & Generasi Z (GenZI)",
+    "uraian": "Remas Al Akbar bertransformasi menyesuaikan karakteristik pemuda muslim modern menjadi Mosque Youth Movement yang aktif mengonsolidasikan potensi generasi muda se-Jawa Timur melalui pengembangan dakwah digital kreatif, Majelis Subuh GenZI (MSG), dan kewirausahaan berbasis nilai-nilai keislaman."
+   }
+  ],
+  "sekretariat": {
+   "kantor": "Sekretariat Masjid Nasional Al-Akbar Surabaya",
+   "alamat": "Jl. Masjid Al-Akbar Timur No.1, Pagesangan, Surabaya",
+   "email": "remas@alakbar.or.id",
+   "kontak": "0821-3990-2625"
+  }
+ },
+ "struktur": {
+  "pembina": [
+   { "jabatan": "Ketua BPP MAS", "lembaga": "Badan Pelaksana Pengelola Masjid Al-Akbar" },
+   { "jabatan": "Sekretaris BPP MAS", "lembaga": "Badan Pelaksana Pengelola Masjid Al-Akbar" },
+   { "jabatan": "Bendahara BPP MAS", "lembaga": "Badan Pelaksana Pengelola Masjid Al-Akbar" }
+  ],
+  "penanggungJawab": {
+   "nama": "H. M. Ghofirin, M.Pd.",
+   "jabatan": "Kabid Imarah Masjid Nasional Al-Akbar Surabaya"
+  },
+  "dewanPakar": [
+   "H.M. Choliq Idris, S.Ag",
+   "Agoes Suroso",
+   "H. Sutrisno, ST",
+   "Ahmad Maula Azka El Fata"
+  ],
+  "bph": [
+   {
+    "jabatan": "Ketua Umum",
+    "nama": "Ubaid Aisyul Hana",
+    "peran": "Memimpin dan mengoordinasikan seluruh pergerakan organisasi Remas Al-Akbar Surabaya."
+   },
+   {
+    "jabatan": "Sekretaris",
+    "nama": "Nuzlin Nashihatul Ulayya",
+    "peran": "Mengelola tata kelola administrasi, surat-menyurat, serta dokumentasi keorganisasian."
+   },
+   {
+    "jabatan": "Bendahara",
+    "nama": "Nabilah Qothrunnada",
+    "peran": "Mengatur perencanaan, sirkulasi perbendaharaan, dan pelaporan keuangan organisasi."
+   }
+  ],
+  "bidang": [
+   {
+    "id": "dd",
+    "nama": "Bidang Dakwah dan Digital",
+    "warna": "var(--c-dd)",
+    "fokus": "Optimalisasi syiar Islam melalui media digital, pengelolaan media sosial, serta inovasi konten dakwah kekinian yang interaktif.",
+    "ketua": "Muhammad Naufal Rafif Ramadhan",
+    "sekretaris": "Aprilia Roosyidah",
+    "anggota": [
+     "M. Fahri Mubarok",
+     "Reza Muhammad Aquillah Haris",
+     "Mochammad Roudho Brammastyo",
+     "Anggun Salsanabila Nur Alhudin",
+     "Madina Insan Azzahra",
+     "Naeli Zulfa Amna",
+     "Emil Lailatul Kamila",
+     "Hanum Salsabila"
+    ]
+   },
+   {
+    "id": "ek",
+    "nama": "Bidang Event dan Kerjasama",
+    "warna": "var(--c-ek)",
+    "fokus": "Penyelenggaraan kegiatan skala besar, peringatan hari besar Islam (PHBI), serta membangun kemitraan strategis dengan pihak eksternal.",
+    "ketua": "Maulana Farhan Kamil",
+    "sekretaris": "Nindi Sukma Arsanih",
+    "anggota": [
+     "Nazwa Aulia",
+     "M. Rifqi Dimas Firmansyah",
+     "Fahmi Zaki Achmad",
+     "Savrida Nasya Lazialita",
+     "Arly Restu Tri Al Khoir",
+     "Intan Nur Hanifah",
+     "Adzkiyatur Rahmah"
+    ]
+   },
+   {
+    "id": "oe",
+    "nama": "Bidang Olahraga dan Entrepreneurship",
+    "warna": "var(--c-oe)",
+    "fokus": "Menjaga kebugaran jasmani kader masjid sekaligus mendorong jiwa kewirausahaan mandiri untuk menyokong finansial organisasi.",
+    "ketua": "M. Kiswah Mubarok",
+    "sekretaris": "Dona Aulia Veronika",
+    "anggota": [
+     "M. Iqbal Firmansyah",
+     "Alfantyno Iqbal Ramadhan",
+     "Ikbalul Khoir",
+     "Zen Erza Athoriq",
+     "Fitri Romadhoni",
+     "Muhammad Farrell Setya Al Farizi",
+     "Farijalu Maulana Fiqih",
+     "Muhammad Dzikri Faisal"
+    ]
+   }
+  ]
+ }
 };
