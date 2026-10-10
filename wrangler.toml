@@ -5,4 +5,4 @@ pages_build_output_dir = "."
 # Binding Cloudflare R2 Bucket untuk dokumentasi foto
 [[r2_buckets]]
 binding = "REMAS_BUCKET"
-bucket_name = "remas-alakbar-dokumentasi"
+bucket_name = "remasphoto"

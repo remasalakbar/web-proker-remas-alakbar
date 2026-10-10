@@ -26,16 +26,16 @@ Situs ini dibangun dengan arsitektur modern berbasis **Cloudflare Pages + Cloudf
 
 ### 2. Konfigurasi Cloudflare R2 untuk Penyimpanan Foto
 1. Di dashboard Cloudflare, buka menu **R2** di sidebar kiri.
-2. Klik **Create bucket**, buat bucket dengan nama:
+2. Buat bucket (atau gunakan yang sudah ada) dengan nama:
    ```text
-   remas-alakbar-dokumentasi
+   remasphoto
    ```
 3. Hubungkan bucket R2 ke Cloudflare Pages:
    - Buka project Pages Anda di Cloudflare.
    - Masuk ke tab **Settings** > **Functions** > scroll ke bagian **R2 bucket bindings**.
    - Klik **Add binding**:
      - **Variable name**: `REMAS_BUCKET`
-     - **R2 bucket**: Pilih `remas-alakbar-dokumentasi`
+     - **R2 bucket**: Pilih `remasphoto`
    - Klik **Save**.
 4. *(Opsional)* Jika ingin mengaktifkan Public R2 Domain:
    - Pada bucket R2, buka tab **Settings** > aktifkan **Public Development URL** (atau hubungkan Custom Domain).
